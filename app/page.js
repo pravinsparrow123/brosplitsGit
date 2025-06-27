@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import  HeroSection  from "../components/HeroSection";
 
 export default function Home() {
    const brandName = process.env.NEXT_PUBLIC_BRAND_NAME;
@@ -59,42 +60,8 @@ export default function Home() {
   </motion.div>
 </div> */}
 
-<div className="relative w-full h-screen overflow-hidden text-white">
-  {/* Background Video */}
-  <video
-    autoPlay
-    loop
-    muted
-    playsInline
-    className="absolute inset-0 w-full h-full object-cover brightness-50"
-  >
-    <source src="/videos/running-v.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
 
-  {/* Overlay Content */}
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 1 }}
-    className="relative z-10 flex items-center justify-center h-full px-4 text-center"
-  >
-    <div className="bg-black/60 backdrop-blur-sm p-10 rounded-xl max-w-2xl">
-      <h1 className="text-5xl font-bold mb-6">Get Fit with {brandName}</h1>
-      <p className="text-lg mb-6">
-        Personalized training plans, expert coaching, and real results.
-      </p>
-      <motion.a
-        href="/contact"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        className="inline-block bg-white text-indigo-700 font-semibold px-6 py-3 rounded-full shadow-lg"
-      >
-        Book Your Free Trial
-      </motion.a>
-    </div>
-  </motion.div>
-</div>
+<HeroSection />
 
 
 
