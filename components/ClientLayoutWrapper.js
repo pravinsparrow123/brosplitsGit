@@ -6,7 +6,7 @@ import Footer from "./Footer";
 export default function ClientLayoutWrapper({ children }) {
   const pathname = usePathname();
   const pageName = pathname === "/" ? "Home" : pathname.replace("/", "").toUpperCase();
-
+// alert(pageName);
   return (
     <>
       <Header currentPage={pageName} />
