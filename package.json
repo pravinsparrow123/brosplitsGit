@@ -6,10 +6,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "export": "next export",
-  "deploy": "npm run build && npm run export && cd out && git init && git add . && git commit -m 'Deploy' && git branch -M main && git remote add origin https://github.com/pravinsparrow123/brosplitsGit.git && git push -f origin main"
+     "predeploy": "npm run build && npm run export",
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "framer-motion": "^12.19.1",
@@ -24,6 +25,7 @@
     "@tailwindcss/postcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "gh-pages": "^6.3.0",
     "tailwindcss": "^4"
   }
 }
